@@ -7,18 +7,17 @@ import Todolist from "./Todolist";
 const Header = () => {
 
 const [list, setList] = useState([])
-const [inner, setİnner] = useState()
+const [inner, setİnner] = useState("")
 
 const handleChange = (e) =>{
   setİnner(e.target.value)
 }
 
 const handleClick=()=>{ 
-  setList(arr=>[...list, {todo:(inner)}]);
-  setİnner("")
-
-console.log(list);}
-
+  setList([...list, {
+    id: new Date().getTime(),
+    todo:(inner),}]);
+    setİnner("")}
 
   return (
     <header>
@@ -27,9 +26,7 @@ console.log(list);}
         <button onClick={handleClick}>Add Todo</button>
         <main>
         <h2>Todos</h2>
-            {list.map((item, i)=>( <Todolist key={i}  content={item.todo} 
-            />
-            ))}        
+        <Todolist  setList = {setList} list={list}/>    
         </main>
     </header>
   )
