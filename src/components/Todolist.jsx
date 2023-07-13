@@ -2,8 +2,7 @@
 
 const Todolist = ({content}) => {
   return (
-    <div>
-        
+    <div className="list"> 
         <p>
             {content}
         </p>

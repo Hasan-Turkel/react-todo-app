@@ -6,22 +6,24 @@ import Todolist from "./Todolist";
 
 const Header = () => {
 
-// let list =["abc", "abc"]
 const [list, setList] = useState([])
-const writeDom=(e)=>{
-    setList(arr=>[...list, {todo:(e.target.previousElementSibling.value)}]);
+const [inner, setİnner] = useState()
+
+const handleChange = (e) =>{
+  setİnner(e.target.value)
 }
 
-const handleClick=(e)=>{ 
-    writeDom(e);
-  
-  
+const handleClick=()=>{ 
+  setList(arr=>[...list, {todo:(inner)}]);
+  setİnner("")
 
 console.log(list);}
+
+
   return (
     <header>
         <h1>Todo App</h1>
-        <input type="text" />
+        <input type="text" value={inner} placeholder="what are we doing today" onChange={handleChange}/>
         <button onClick={handleClick}>Add Todo</button>
         <main>
         <h2>Todos</h2>
