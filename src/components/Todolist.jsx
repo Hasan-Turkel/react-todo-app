@@ -4,7 +4,7 @@ const Todolist = ({setList, list}) => {
   const handleDelete=(id)=>{
     setList(list.filter((item)=>item.id!==id));
 
-    
+  
     localStorage.setItem("list", JSON.stringify(list))
    
   }
