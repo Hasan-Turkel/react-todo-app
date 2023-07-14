@@ -9,12 +9,12 @@ const handleChange = (e) =>{
   setİnner(e.target.value)
 }
 
-const handleClick=()=>{inner!=""&&
+const handleClick=()=>{inner!==""&&
   setList([...list, {
     id: new Date().getTime(),
     todo:(inner),}]);
     setİnner("");
-    inner==""&&alert("inside of the input can't be empty")
+    inner===""&&alert("inside of the input can't be empty")
    };
 
   
