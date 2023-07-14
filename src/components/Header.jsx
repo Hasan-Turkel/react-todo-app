@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+
 const Header = ({setList, list}) => {
 
 const [inner, setİnner] = useState("")
@@ -15,10 +16,11 @@ const handleClick=()=>{inner!=""&&
     setİnner("");
     inner==""&&alert("inside of the input can't be empty")
    };
+
+  
    localStorage.setItem("list", JSON.stringify(list))
-    
-
-
+   
+   
   return (
     <header>
         <h1>Todo App</h1>
