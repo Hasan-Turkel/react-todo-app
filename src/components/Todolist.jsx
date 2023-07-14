@@ -10,7 +10,7 @@ const Todolist = ({setList, list}) => {
   }
   return (
   <main >
-    {list.map(({id, todo})=> (<div key={id}  className="list"> 
+    {list?.map(({id, todo})=> (<div key={id}  className="list"> 
   <p>
       {todo}
   </p>
