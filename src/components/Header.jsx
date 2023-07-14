@@ -8,11 +8,16 @@ const handleChange = (e) =>{
   setİnner(e.target.value)
 }
 
-const handleClick=()=>{ 
+const handleClick=()=>{inner!=""&&
   setList([...list, {
     id: new Date().getTime(),
     todo:(inner),}]);
-    setİnner("")}
+    setİnner("");
+    inner==""&&alert("inside of the input can't be empty")
+   };
+   localStorage.setItem("list", JSON.stringify(list))
+    
+
 
   return (
     <header>

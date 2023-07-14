@@ -1,12 +1,55 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-align: center;
   margin: 10px 0px;
-  
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.list{
+
+body {
+  background-color: rgba(0, 0, 0, 0.253);
+  background-image: url(../public/clock.jpg);
+  background-blend-mode: darken;
+}
+
+header {
+  & h1 {
+    font-size: 40px;
+    text-shadow: 3px 3px 5px black;
+  }
+  & input {
+    width: 50%;
+    max-width: 500px;
+    height: 50px;
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+  }
+  & button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 5px 5px 20px black;
+    background-color: cadetblue;
+    cursor: pointer;
+  }
+  & h2{
+    font-size: 30px;
+    text-shadow: 3px 3px 5px black;
+
+  }
+}
+
+.list {
   display: flex;
   text-align: center;
   min-width: 300px;
@@ -16,30 +59,25 @@
   justify-content: space-between;
   padding: 10px;
   font-size: 20px;
-  & span{
+  border: none;
+  border-radius: 20px;
+  background-color: burlywood;
+  & span {
     cursor: pointer;
-   
   }
-
 }
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
-
-input{
-  width: 50%;
-  max-width: 500px;
+.cleaner {
+  width: 350px;
   height: 50px;
   font-size: 20px;
-  text-align: left;
-  padding: 10px;
-
-}
-button{
-  width: 100px;
-  height: 50px;
-  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px black;
+  background-color: rgb(255, 196, 0);
+  cursor: pointer;
 }
