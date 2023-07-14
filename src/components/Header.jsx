@@ -1,12 +1,7 @@
 import { useState } from "react"
 
-import Todolist from "./Todolist";
+const Header = ({setList, list}) => {
 
-
-
-const Header = () => {
-
-const [list, setList] = useState([])
 const [inner, setİnner] = useState("")
 
 const handleChange = (e) =>{
@@ -24,10 +19,7 @@ const handleClick=()=>{
         <h1>Todo App</h1>
         <input type="text" value={inner} placeholder="what are we doing today" onChange={handleChange}/>
         <button onClick={handleClick}>Add Todo</button>
-        <main>
         <h2>Todos</h2>
-        <Todolist  setList = {setList} list={list}/>    
-        </main>
     </header>
   )
 }
