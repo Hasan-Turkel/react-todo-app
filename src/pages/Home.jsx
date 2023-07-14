@@ -4,8 +4,10 @@ import {useState} from "react";
 
 
 const Home = () => {
-
-    const [list, setList] = useState(JSON.parse(localStorage.getItem("list")))
+    
+    const [list, setList] = useState(JSON.parse(localStorage.getItem("list"))||[]);
+    localStorage.setItem("list", JSON.stringify(list));
+    
     const handleLocale = ()=>{
         setList([])
     }
