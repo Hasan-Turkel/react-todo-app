@@ -13,7 +13,8 @@ const handleChange = (e) =>{
 const handleClick=()=>{inner!==""&&
   setList([...list, {
     id: new Date().getTime(),
-    todo:(inner),}]);
+    toogle:false,
+    todo:(inner)}]);
     setİnner("");
     inner===""&&alert("inside of the input can't be empty")
     localStorage.setItem("list", JSON.stringify(list))
@@ -22,9 +23,10 @@ const handleClick=()=>{inner!==""&&
 
   return (
     <header>
-        <h1>Todo App</h1>
+        <h1>Todo App </h1>
         <input type="text" value={inner} placeholder="what are we doing today" onChange={handleChange}/>
         <button onClick={handleClick}>Add Todo</button>
+        <h2>Today is:{new Date().toLocaleDateString().slice(0, 10)}</h2>
         <h2>Todos</h2>
     </header>
   )

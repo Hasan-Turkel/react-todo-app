@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.253);
+  background-color: rgba(0, 0, 0, 0.103);
   background-image: url(../public/clock.jpg);
   background-blend-mode: darken;
 }
@@ -30,6 +30,7 @@ header {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: 5px 5px 20px black;
+    margin-bottom: 30px;
   }
   & button {
     width: 100px;
@@ -62,9 +63,10 @@ header {
   border: none;
   border-radius: 20px;
   background-color: burlywood;
-  & span {
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
+.red{
+  background-color: red;
 }
 main {
   display: flex;

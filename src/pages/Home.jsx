@@ -16,7 +16,8 @@ const Home = () => {
     <>
     <Header setList = {setList} list={list}/>
     <Todolist setList = {setList} list={list}/>
-    <button className="cleaner" onClick={handleLocale}>Today is:{new Date().toLocaleDateString().slice(0, 10)} | Start a new day </button>
+    {list.length > 0 && <button className="cleaner" onClick={handleLocale}>Start a new day </button>}
+   
     </>
   )
 }
